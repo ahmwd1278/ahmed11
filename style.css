@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #111827;
+    color: rgb(255, 255, 255);
+}
+
+
+header {
+    background-color: #1F2937;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 60px ;
+}
+.logo{
+    font-family:"Bebas Neue", serif;
+    font-size: 5.5rem;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+    
+}
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    
+}
+
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: #111827;
+}
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span{
+    font-size: 8rem;
+    font-family:"Bebas Neue", serif;
+    width: 800;
+    color: #b74b4b;
+}
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-content p{
+    font-size: 1.6rem;
+}
+.home-img{
+    border-radius: 40%;
+}
+.home-img img{
+    position: relative;
+    width: 27vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #27224b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #ffffff;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #ffffff;
+}
+.social-icons a:hover{
+    color: #ffffff;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #263961;
+    box-shadow: 0  0 25px #4463a4;
+}
+section{
+    background-color: #1F2937;
+}
+.title{
+    display: flex;
+    justify-content:center ;
+    color: #ffffff;
+    font-size: 3.5em;
+    font-weight: 800;
+    margin-bottom: 30px ;
+}
+.content{
+    display: flex ;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+/* Container for Cards */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a202c; /* Dark Background */
+}
+
+/* General Card Styling */
+.card {
+    position: relative;
+    margin: 12px;
+    width: 320px;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Section */
+.img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the card fully */
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .img img {
+    opacity: 0.6; /* Darken image on hover */
+}
+
+/* Info Section */
+.info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    opacity: 0; /* Hide text initially */
+    transform: translateY(20px); /* Move text out of view */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 0;
+}
+
+.card:hover .info {
+    opacity: 100; /* Show text on hover */
+    transform: translateY(0); /* Move text into view */
+}
+
+.info h3 {
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.info p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #ffffff;
+    font-weight: 600;
+}
+.car .icon {
+    color: #111827;
+    font-size: 8em;
+    text-align: center;
+}
+.car{
+    background-color: #fff;
+    width: 21.50em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px;
+    transition: 0.7s ease;
+
+}
+.inf h3 {
+    color: #0a4585;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    
+
+}
+
+.inf p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #0a4585;
+    font-weight: 800;
+    text-align: center;
+}
+.section1{
+    margin-bottom: 30px;
+}
+
+
+.car:hover {
+    
+    transform: scale(1.1);
+}
+
+.footer {
+    padding: 3px ;
+    background-color: #111827;
+    color: #fff;
+    text-align: center;
+    display: center;
+    justify-content: space-between;
+}
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #1a253b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  #back-to-top:hover {
+    background-color: #2d4881;
+  }
+  
+  /* إظهار الزر عند التمرير */
+  #back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: block;
+    }
+  
+    .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #1F2937;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
+    .navbar.active {
+      display: flex;
+    }
+  
+    .navbar a {
+      margin: 1rem 0;
+    }
+  }
+  /* الهواتف (شاشات أقل من 600px) */
+@media (max-width: 600px) {
+    html {
+        font-size: 50%; /* تصغير النص ليكون مناسبًا للشاشات الصغيرة */
+    }
+   
+    nav a {
+        font-size: 1.5rem;
+        margin-left: 1.7rem;
+    }
+    .logo {
+        font-size: 3rem;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .home-content h1 {
+        font-size: 4rem;
+    }
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+    .home-content p {
+        font-size: 1.4rem;
+    }
+    .home-img img {
+        width: 50vw;
+    }
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.6rem;
+        margin: 2rem 1rem 2rem 0;
+    }
+
+}
+
+/* التابلت (شاشات بين 600px و 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    html {
+        font-size: 75.25%; /* تصغير النص قليلاً */
+    }
+    header {
+        padding: 10px 30px;
+    }
+    nav a {
+        font-size: 1.6rem;
+        margin-left: 3rem;
+    }
+    .logo {
+        font-size: 3.5rem;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-content h3 {
+        font-size: 3rem;
+    }
+    .home-content p {
+        font-size: 2.5rem;
+    }
+    .home-img img {
+        width: 40vw;
+    }
+    .social-icons a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+        margin: 2.5rem 1rem 2.5rem 0;
+    }
+
+}
+
+/* شاشات كبيرة (أكثر من 1024px) */
+@media (min-width: 1025px) {
+    .home-content h1 {
+        font-size: 6rem;
+    }
+    .home-content h3 {
+        font-size: 4rem;
+    }
+    .home-content p {
+        font-size: 1.8rem;
+    }
+    .home-img img {
+        width: 30vw;
+    }
+
+}
+
+  
+
+
+
+
+
+
+
+
+
